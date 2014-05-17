@@ -1,0 +1,63 @@
+﻿1) Forneça a seqüência de movimentos que soluciona os problemas encontrados em 
+
+a) http://www.plastelina.net/games/game1.html - Ovelha, Alface e Lobo
+
+1) Pegue a Ovelha
+2) Leve-a para a outra margem do rio
+3) Deixe a Ovelha
+4) Volte sozinho
+5) Pegue o Alface
+6) Leve-o para a outra margem do rio
+7) Deixe o Alface
+8) Pegue a ovelha
+9) Volte para outra margem
+10) Deixe a Ovelha
+11) Pegue o Lobo
+12) Leve-o para a outra margem
+13) Volte sozinho
+14) Pegue a Ovelha
+15) Leve-a para a outra margem
+16) Finalmente, deixe a ovelha
+
+b) http://www.plastelina.net/games/game2.html - Missionários e Canibais
+
+1) Pegue um Missionário e um Canibal
+2) Leve-os para a outra margem
+3) Deixe um Canibal
+4) Volte com um Missionário;
+5) Deixe o Missionário,
+6) Pegue dois Canibais
+7) Leve-os para a outra margem
+8) Deixe um Canibal
+9) Volte com um Canibal;
+10) Deixe um Canibal
+11) Pegue dois Missionários
+12) Leve-os para a outra margem
+13) Deixe um Missionário
+14) Pegue um Canibal
+15) Volte com um Missionario e um Canibal
+16) Deixe um Canibal
+17) Pegue um Missionário
+18) Leve-os para a outra margem
+19) Deixe os dois Missionarios
+20) Pegue um Canibal
+21) Volte com um Canibal
+22) Pegue um Canibal
+23) Leve-os para a outra margem
+24) Deixe um Canibal
+25) Volte com um Canibal
+26) Pegue um Canibal
+27) Leve-os para a outra margem
+28) Finalmente, deixe os dois Canibais
+
+c) http://www.plastelina.net/games/game3.html - Travessia da Família
+
+Legenda: Vovo - 12 seg ; Pai - 8 seg ; Mae - 6 seg ; Criança - 3 seg ; Jovem - 1 seg.
+
+1) Leve o Jovem e a Criança para o outro lado da ponte
+2) Volte com a Criança
+3) Leve o Pai e o Vovo para o outro lado da ponte
+4) Volte com o Jovem;
+5) Leve o Jovem e a Mae para o outro lado da ponte
+6) Volte com o Jovem
+7) Finalmente, leve o Jovem e a Criança para o outro lado da ponte
