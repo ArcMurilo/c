@@ -56,7 +56,7 @@ int main() {
 	scanf("%f %lf", &f, &g);
 
 	printf("Valor de ponto flutuante simples: %f\n", f);
-	printf("Valor de ponto flutuante dupla precisao: %lf\n\n", g);
+	printf("Valor de ponto flutuante dupla precisao: %.lf\n\n", g);
 
 	system("PAUSE");
 

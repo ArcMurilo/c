@@ -1,4 +1,4 @@
-/*  
+﻿/*  
 Escreva programa para resolver uma equação de segundo grau, dados os valores dos coeficientes a, b, c ( equação: y = a*x*x + b*x + c)
 */
 
@@ -32,10 +32,11 @@ int main() {
 	else {
 		delta = delta * (-1);
 		delta = sqrt(delta);
+		delta = delta / (2 * a);
 
-		x1 = -b / (2 * a);
+		b = -b / (2 * a);
 
-		printf("x1 = %.4f + %.4f*i / x2 = %.4f - %.4f*i\n\n", x1, delta, x1, delta);
+		printf("x1 = %.4f + %.4f*i / x2 = %.4f - %.4f*i\n\n", b, delta, b, delta);
 	}
 
 	return 0;

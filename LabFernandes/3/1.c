@@ -1,4 +1,4 @@
-/*
+﻿/*
 Elaborar uma função para efetuar o produto de duas matrizes reais inicializados pelo teclado.
 Protótipo: void produto_matrizes(double a[N][K], double b[K][M], double c[N][M], int n, int m, int k).
 */
@@ -7,7 +7,7 @@ Protótipo: void produto_matrizes(double a[N][K], double b[K][M], double c[N][M]
 #include <stdlib.h>
 #define N 2
 #define K 2
-#define M 3 
+#define M 2 
 
 void produto_matrizes(double[][K], double[][M], double[][M], int, int, int);
 

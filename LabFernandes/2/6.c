@@ -1,4 +1,4 @@
-/*
+﻿/*
 Escreva programa leia números, de ponto flutuante, cada elemento representando o tempo, em segundos,
 de uma volta em torno da pista de um autódromo. Seu programa deve para a leitura quando um valor de 
 tempo negativo ou zero for lido. Seu programa deve então deve calcular :
@@ -19,6 +19,8 @@ int main() {
 	maiorTempo = tempoAtual;
 
 	while (tempoAtual > 0) {
+
+
 		menorTempo = melhorVolta(menorTempo, tempoAtual);
 		maiorTempo = piorVolta(maiorTempo, tempoAtual);
 		tempoMedio += tempoAtual;

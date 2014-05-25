@@ -17,14 +17,21 @@ int main() {
 
 	// ordena os numeros, aproveita a variavel soma (ja criada, economizando espaco)
 	if (num1 > num2) {
-		soma = num1;
-		num1 = num2;
-		num2 = soma;
+		i = num2;
+	}
+	else {
+		i = num1;
 	}
 
-	soma = 0;
+	if(num1 % 3 == 1) {
+		i = num1 + 2;
+	}
 
-	for(i = num1; i <= num2; i += 3) {
+	if(num1 % 3 == 2) {
+		i = num1 + 1;
+	}
+
+	for(; i <= num2; i += 3) {
 		soma += i;
 	}
 

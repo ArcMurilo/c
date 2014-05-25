@@ -1,4 +1,4 @@
-/*
+﻿/*
 Escreva um programa que leia o número de horas semanais trabalhadas e 
 o valor da hora de trabalho e calcule o salário semanal. Inclua as horas 
 extras pagando 50% a mais que o valor das horas normais (40hs).
@@ -18,16 +18,15 @@ int main() {
 	printf("\nValor hora: ");
 	scanf("%f", &valor_hora);
 
-	// como o calculo do salario semanal e feito sempre ele fica fora da condicao
-	salario_semanal += (horas_trabalhadas * valor_hora);
 
-	// caso as horas trabalhas ultrapassem 40 houve horas extras
-	// entao o salario deve ser somado ao valor das horas extras
 	if (horas_trabalhadas > 40) {
 		horas_extras = horas_trabalhadas - 40;
-		salario_semanal += (horas_extras * valor_hora * 1.5);
+		salario_semanal = 40 * valor_hora + horas_extras * valor_hora * 1.5;
 	}
-
+	else {
+		salario_semanal = horas_trabalhadas * valor_hora;
+	}
+	
 	printf("Salario: R$ %.2f\n", salario_semanal);
 
 	system("PAUSE");

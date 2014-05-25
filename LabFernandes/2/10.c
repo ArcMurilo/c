@@ -1,4 +1,4 @@
-/*
+﻿/*
 Implemente e teste programa para solucionar o jogo torres de hanói. Ver livro texto.
 */
 #include <stdio.h>
@@ -7,12 +7,11 @@ void movetorre(int, char, char, char);
 
 int main(){
    int discos;
-   printf("\t\t\t\tTORRE DE HANOY\n\n");
+   printf("TORRE DE HANOY\n\n");
    printf("Digite a quantidade de discos: ");
    scanf("%d",&discos);
    movetorre(discos,'A','C','B');
    printf("\n");
-   system("PAUSE");
    return 0;
 }
 
