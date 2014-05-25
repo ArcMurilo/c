@@ -26,7 +26,7 @@ int mystrcmp(char str1[], char str2[]) {
 void mystrcpy(char strOrigem[], char strDestino[]) {
 	int i;
 
-	for(i = 0; strOrigem[i] != '\0'; i++) {
+	for(i = 0; strOrigem[i] != '\0'; ++i) {
 		strDestino[i] = strOrigem[i];
 	}
 
@@ -45,8 +45,9 @@ void print_string(char str[]) {
 
 void print_reverse(char str[]) {
 	int i;
+	i = mystrlen(str);
 
-	for(i = mystrlen(str); i >= 0; i--) {
+	for(; i >= 0; i--) {
 		printf("%c", str[i]);
 	}
 
@@ -54,12 +55,14 @@ void print_reverse(char str[]) {
 }
 
 void mystrreverse(char str[], char strDestino[]) {
-	int i, posicao = mystrlen(str) - 1;
+	int i, j;
 
+	for(j = 0; str[j] != '\0'; j++);
 
+	j = j-1;
 	for(i = 0; str[i] != '\0'; i++) {
-		strDestino[i] = str[posicao - i];
-		printf("%c\n", str[0]);
+		strDestino[i] = str[j];
+		j--;
 	}
 
 	strDestino[i] = '\0';
@@ -68,7 +71,7 @@ void mystrreverse(char str[], char strDestino[]) {
 int find_first(char string[], char letra) {
 	int i;
 
-	for (int i = 0; string[i] != '\0'; ++i) {
+	for (i = 0; string[i] != '\0'; ++i) {
 		if(string[i] == letra){
 			return i;
 		}
@@ -80,7 +83,7 @@ int find_first(char string[], char letra) {
 int find_last(char string[], char letra) {
 	int i, posicao = -1;
 
-	for (int i = 0; string[i] != '\0'; ++i) {
+	for (i = 0; string[i] != '\0'; ++i) {
 		if(string[i] == letra){
 			posicao = i;
 		}
@@ -90,7 +93,6 @@ int find_last(char string[], char letra) {
 }
 
 void elimina_letra(char string[], char strDestino[], char letra) {
-	char string_aux[mystrlen(string)];
 	int i, j = 0;
 
 	for(i = 0; string[i] != '\0'; i++) {
@@ -100,56 +102,59 @@ void elimina_letra(char string[], char strDestino[], char letra) {
 		strDestino[j] = string[i];
 		j++;
 	}
+	strDestino[j] = '\0';
 }
 
-void mystrcat(char str1[], char str2[]) {
-	int i;
+void mystrcat(char str1[], char str2[], char strDestino[]) {
+	int i, j;
 
 	for(i = 0; str1[i] != '\0'; i++)
-		printf("%c", str1[i]);
+		strDestino[i] = str1[i];
 
-	for(i = 0; str2[i] != '\0'; i++)
-		printf("%c", str2[i]);
+	for(j = 0; str2[j] != '\0'; j++) {
+		strDestino[i] = str2[j];
+		i++;
+	}
 
-	printf("\n");
+	strDestino[i] = '\0';
 }
 
 
 int main() {
-	char str[] = "linguagem C";
-	char str2[] = "JAVA";
+	char str[100];
+	char str2[100];
+	char strDestino[100];
 
-//	printf("mystrlen = %d\n", mystrlen(str));
+	gets(str);
+	gets(str2);
 
-//	printf("mystrcmp = %d\n", mystrcmp(str, str2));
+	printf("mystrlen = %d\n", mystrlen(str));
 
-//	mystrcat(str, str2);
+	printf("mystrcmp = %d\n", mystrcmp(str, str2));
 
-//	printf("\n");
+	mystrcat(str, str2, strDestino);
 
-//	print_string(str);
+	printf("print_string = ");
+	print_string(strDestino);
 
-//	printf("\n");
+	mystrcpy(str, str2);
 
-//	mystrcpy(str, str2);
+	printf("str2 apos mystrcpy = %s\n", str2);
 
-//	printf("str2 apos mystrcpy = %s\n", str2);
-
+	printf("print_reverse = ");
 	print_reverse(str);
 
-	printf("\n");
+	mystrreverse(str, strDestino);
 
-	mystrreverse(str, str2);
+	printf("str2 apos mystrreverse = %s\n", strDestino);
 
-	printf("str2 apos mystrreverse = %s\n", str2);
+	printf("find_first(str, 'g') = %d\n", find_first(strDestino, 'g'));
 
-//	printf("find_first(str, 'g') = %d\n", find_first(str, 'g'));
+	printf("find_last(str, 'g') = %d\n", find_last(strDestino, 'g'));
 
-//	printf("find_last(str, 'g') = %d\n", find_last(str, 'g'));
+	elimina_letra(str2, strDestino, 'n');
 
-//	elimina_letra(str, str2, 'n');
-
-//	printf("str2 apos elimina_letra = %s\n", str2);
+	printf("str2 apos elimina_letra = %s\n", strDestino);
 
 	return 0;
 }
